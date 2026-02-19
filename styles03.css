@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sp {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.top {
+    padding-top: 30px;
+    display: flex;
+}
+
+.rogo {
+    margin: 8px 58px 0 30px;
+}
+
+.menu {
+    display: flex;
+    background-color: #FFF;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #333333;
+    box-shadow: 4px 4px 0 0 #418F0C;
+    align-items: center;
+    justify-content: center;
+    padding-left: 38px;
+
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu a{
+    color: #333333;
+    text-decoration: none;
+}
+
+.menu::before ,
+.menu::after{
+    content: "";
+    position: absolute;
+    left: 25px;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    transition: 0.3s;
+}
+
+.menu::before{
+    top: 15px;
+}
+
+.menu::after{
+    bottom: 15px;
+}
+.menu.active::before{
+    top: 19px;
+    transform: rotate(45deg);
+}
+
+.menu.active::after{
+    bottom: 19px;
+    transform: rotate(-45deg);
+}
+
+/* メニューボタン */
+.menu_btn {
+    text-align: center;
+
+}
+
+.btnlist01 {
+    margin: 50px 30px 60px;
+}
+
+.btnlist01 ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.btnlist01 li {
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    text-decoration: none;
+
+    margin: 30px;
+}
+
+.btnlist01 a {
+    color: #418F0C;
+    text-decoration: none;
+}
+
+/* フォロー */
+
+.sns {
+    background-color: #4C4B00;
+    border-radius: 70px 0 0 0;
+    width: 90%;
+    text-decoration: none;
+    margin-left: 39px;
+    padding-bottom: 110px;
+}
+
+
+.follow {
+    display: flex;
+    padding: 30px 30px 0;
+    gap: 15px;
+}
+
+.sns h3 {
+    color: white;
+    font-weight: 600;
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.sns_icon {
+    display: flex;
+}
+
+.sns a {
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+
+/* フッター */
+footer {
+    margin-top: -90px;
+    background-color: #317901;
+    border-radius: 0 95px 0 0;
+}
+
+footer img {
+    width: 154px;
+    height: 65px;
+    margin-top: 20px;
+}
+
+.ft_rogo {
+    text-align: center;
+    padding: 12px;
+}
+
+.ft_copy {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 40px;
+}

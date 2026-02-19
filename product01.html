@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Ballet:opsz@16..72&family=Bitcount+Grid+Double:wght@100..900&family=Gasoek+One&family=Gravitas+One&family=Jersey+10&family=M+PLUS+Rounded+1c&family=Rubik+Puddles&family=Rubik+Spray+Paint&family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Ballet:opsz@16..72&family=Bitcount+Grid+Double:wght@100..900&family=Gasoek+One&family=Gravitas+One&family=Jersey+10&family=Rubik+Puddles&family=Rubik+Spray+Paint&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/styles04.css">
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const select = document.getElementById("sortSelect");
+        const productList = document.querySelector(".productList");
+        const items = Array.from(document.querySelectorAll(".product-item"));
+
+        // 元の順番を保存
+        items.forEach((item, index) => {
+            item.dataset.order = index;
+        });
+
+        select.addEventListener("change", function () {
+
+            let sortedItems = [...items];
+
+            if (this.value === "price_low") {
+                sortedItems.sort((a, b) =>
+                    Number(a.dataset.price) - Number(b.dataset.price)
+                );
+            }
+
+            if (this.value === "price_high") {
+                sortedItems.sort((a, b) =>
+                    Number(b.dataset.price) - Number(a.dataset.price)
+                );
+            }
+
+            if (this.value === "new") {
+                sortedItems.sort((a, b) =>
+                    Number(a.dataset.order) - Number(b.dataset.order)
+                );
+            }
+
+            sortedItems.forEach(item => {
+                productList.appendChild(item);
+            });
+
+        });
+
+    });
+</script>
+
+
+<body>
+    <div class="wrapper">
+        <div class="sp">
+            <div class="mv">
+                <header>
+                    <div class="top">
+                        <div class="rogo">
+                            <p class="rogo01"><img src="img/neo_brack.svg" alt="ロゴ"></p>
+                        </div>
+                        <div class="menu">
+                            <a href="menu.html">
+                                MENU
+                            </a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <section class="exp_box">
+                <h1>experience</h1>
+                <h2>レザークラフト体験</h2>
+                <p class="box_txt">
+                    革に触れ、悩み、選ぶ。<br>
+                    その一瞬一瞬が、特別な時間として積み重なっていく。<br>
+                    思いのままに選んだ色や形が、<br>
+                    あなただけの表情を持った作品になる。<br>
+                    使うたびに、体験した時間を思い出せる。<br>
+                    あなたは、どれを選びますか？
+                </p>
+            </section>
+
+            <section class="crft_item">
+                <h3>item</h3>
+                <h4>制作できるアイテム</h4>
+                <p class="crft_txt">
+                    縫う作業がないためどれも<br>
+                    小さいお子さんでも簡単に作ることができます<br>
+                    革の種類、色は決まっておらず、<br>
+                    その日その日で異なります。
+                </p>
+            </section>
+
+            <section class="popular">
+                <h5>Popular items</h5>
+                <h4>人気アイテム</h4>
+                <div class="pop">
+                    <p><img src="img/01_coincase.png" alt=""></p>
+                    <dl>
+                        <dt>コインケース</dt>
+                        <p class="pop_txt">
+                            手になじむサイズ感と使いやすさが人気。<br>
+                            毎日持ちたくなるシンプルな仕上がりです。
+                        </p>
+                        <dd>￥1,650</dd>
+                    </dl>
+                </div>
+                <div class="pop_1">
+                    <p><img src="img/02_handpoti.png" alt=""></p>
+                    <dl>
+                        <dt>手のひらポーチ</dt>
+                        <p class="pop_txt">
+                            コンパクトなのにしっかり入る収納力。<br>
+                            使い勝手の良さが選ばれる理由です。
+                        </p>
+                        <dd>￥2,750</dd>
+                    </dl>
+                </div>
+                <div class="pop">
+                    <p><img src="img/03_minimini.png" alt=""></p>
+                    <dl>
+                        <dt>ミニミニバック</dt>
+                        <p class="pop_txt">
+                            小ぶりでも上品な存在感。<br>
+                            コーデに取り入れやすいと好評です。
+                        </p>
+                        <dd>￥1,760</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <div class="sort-box">
+                <span class="sort-label">並び順</span>
+                <select id="sortSelect">
+                    <option value="new">新着順</option>
+                    <option value="price_low">価格が安い順</option>
+                    <option value="price_high">価格が高い順</option>
+                </select>
+            </div>
+
+            <section class="crft_box">
+                <div class="productList">
+                    <dl class="product-item" data-price="1650">
+                        <p class="crft_img">
+                            <img src="img/04_3coincase.png" alt="">
+                        </p>
+                        <dt>トライアングルコインケース</dt>
+                        <dd>￥1,650</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="1760">
+                        <p class="crft_img">
+                            <img src="img/05_minipoti.png" alt="">
+                        </p>
+                        <dt>ミニポーチ</dt>
+                        <dd>￥1,760</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="2000">
+                        <p class="crft_img">
+                            <img src="img/06_3keey.png" alt="">
+                        </p>
+                        <dt>3連キーケース</dt>
+                        <dd>￥2,000</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="2420">
+                        <p class="crft_img">
+                            <img src="img/07_4keey.png" alt="">
+                        </p>
+                        <dt>4連キーケース</dt>
+                        <dd>￥2,420</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="4400">
+                        <p class="crft_img">
+                            <img src="img/08_phonecase.png" alt="">
+                        </p>
+                        <dt>スマホポシェット</dt>
+                        <dd>￥4,400</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="2200">
+                        <p class="crft_img">
+                            <img src="img/09_namecase.png" alt="">
+                        </p>
+                        <dt>名刺入れ</dt>
+                        <dd>￥2,200</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="4500">
+                        <p class="crft_img">
+                            <img src="img/camera02.png" alt="">
+                        </p>
+                        <dt>オールインワンポーチ</dt>
+                        <dd>￥4,500</dd>
+                    </dl>
+
+                    <dl class="product-item" data-price="1320">
+                        <p class="crft_img">
+                            <img src="img/11_keeyhorder.png" alt="">
+                        </p>
+                        <dt>キーホルダー</dt>
+                        <dd>￥1,320</dd>
+                    </dl>
+
+                </div>
+
+                <p class="note">※飾りカシメ・デザイン・革モチーフ等は別途料金がかかります</p>
+
+                <div class="pagination">
+                    <a class="page-numbers" href="product01.html">1</a>
+                    <a class="page-numbers" href="product02.html">2</a>
+                </div>
+
+                <div class="reservation">
+                    <a href="https://www.jalan.net/kankou/spt_guide000000227181/activity_plan/?screenId=OUW3701">
+                        ご予約はこちら
+                        <img src="img/btn01.svg" alt="矢印">
+                    </a>
+                </div>
+            </section>
+
+
+            <section class="sns" id="sns">
+                <div class="follow">
+                    <h3>follow us</h3>
+                    <h4></h4>
+                    <div class="sns_icon">
+                        <a href="">
+                            <img src="img/ikon01.svg" alt="ライン">
+                        </a>
+                        <a href="https://www.instagram.com/ashioto118/">
+                            <img src="img/ikon02.svg" alt="インスタグラム">
+                        </a>
+                        <a href="">
+                            <img src="img/ikon03.svg" alt="ツイッター">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="ft_rogo">
+                    <!-- <a href=""><img src="img/rogo02.png" alt="ロゴ"></a> -->
+                    <p><img src="img/rogo02.png" alt="ロゴ"></p>
+                </div>
+
+                <p class="ft_copy">Copyright © 2026 Hujiwara Company. </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

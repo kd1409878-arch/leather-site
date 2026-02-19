@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sp {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.mv {
+    background-image: url(../img/back03.png);
+    height: 554px;
+}
+
+.top {
+    padding-top: 30px;
+    display: flex;
+}
+
+.rogo {
+    margin: 8px 70px 0 30px;
+}
+
+.menu {
+    display: flex;
+    background-color: #FFF;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #333333;
+    box-shadow: 4px 4px 0 0 #418F0C;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+}
+.menu a{
+    color: #333333;
+    text-decoration: none;
+}
+/* hover */
+.menu:hover {
+    transform: translateY(-2px);
+}
+
+
+/* 押した瞬間（SPでも効く） */
+.menu a:active {
+    transform: translate(4px, 4px) scale(0.97);
+    box-shadow: none;
+}
+
+
+.menu::before,
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    /* 文字より左 */
+    width: 20px;
+    height: 2px;
+    background: #000;
+}
+
+.menu::before {
+    top: 15px;
+}
+
+.menu::after {
+    bottom: 15px;
+}
+
+h1 {
+    color: white;
+    font-size: 44px;
+    font-weight: 700;
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+}
+
+h2 {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 44px;
+    font-weight: 700;
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    /* padding: 50px 30px 0; */
+}
+
+h4 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 私たちについて */
+.campany {
+    margin: 50px 30px 20px;
+    color: white;
+}
+
+.campany h2::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/pic01.png);
+    width: 213px;
+    height: 196px;
+    top: 114px;
+    left: 694px;
+}
+
+.cam_txt01 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.cam_txt02 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* スキル */
+.skill {
+    margin-top: 58px;
+}
+
+.skill h3 {
+    color: #418F0C;
+    margin: 0 30px 0;
+}
+.skill h4{
+    color: #418F0C;
+    margin: 0 30px 0;
+}
+
+.skill_txt p {
+    /* margin: 0 30px 0; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    padding: 30px;
+}
+
+
+.sewing {
+    padding: 0 30px 0;
+    margin: -78px 0 54px;
+    background-image: url(../img/back04.png);
+    height: 810px;
+}
+/* .sew_txt dt{
+    margin: -15px 0 0 ;
+} */
+.sewing dt {
+    margin: 20px 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+.sewing dd {
+    /* position: relative; */
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.sewing_txt01 {
+    padding-top: 142px;
+}
+
+.sewing_item01 {
+    display: flex;
+}
+
+.sew_01 {
+    /* position: absolute; */
+    margin: -10px;
+}
+
+.sewing_item02 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 30px;
+}
+.sew_img03{
+    padding: 0 0 0 136px;
+}
+.ashi{
+    margin-left: 252px;
+}
+/* メッセージ */
+.messege {
+    color: white;
+    background-image: url(../img/messege_back.png);
+    height: 374px;
+}
+
+.messege h3 {
+    padding: 80px 0 0 30px;
+}
+
+.messege h4 {
+    color: white;
+    padding: 0 30px 0;
+}
+
+.mess_item {
+    /* display: flex; */
+    display: flex;
+    /* column-gap: 10px; */
+}
+
+.mess_img {
+    margin: 20px 0 -50px 0;
+    width: 172px;
+    height: 156px;
+}
+
+element.style {
+    margin: 20px 32px -50px 0;
+}
+
+.mess_txt {
+    padding: 58px 30px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+/* メディア */
+.media h3 {
+    color: #333333;
+    margin-top: 50px;
+}
+
+.media h4 {
+    color: #333333;
+
+    margin-bottom: 35px;
+}
+
+.media_slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    /* 横スクロール可 */
+    padding-bottom: 60px;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* フォロー */
+
+.sns {
+    background-color: #4C4B00;
+    border-radius: 70px 0 0 0;
+    width: 90%;
+    text-decoration: none;
+    margin-left: 39px;
+    padding-bottom: 110px;
+}
+
+
+.follow {
+    display: flex;
+    padding: 30px 30px 0;
+    gap: 15px;
+}
+
+.sns h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.sns_icon {
+    display: flex;
+}
+
+.sns a {
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+
+/* フッター */
+footer {
+    margin-top: -90px;
+    background-color: #317901;
+    border-radius: 0 95px 0 0;
+}
+
+footer img {
+    width: 154px;
+    height: 65px;
+    margin-top: 20px;
+}
+
+.ft_rogo {
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 700;
+
+    border: 3px dotted #558C50;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.ft_copy {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 40px;
+}

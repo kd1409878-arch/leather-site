@@ -1,0 +1,997 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sp {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+
+.mv {
+    background: url("../img/MV.jpeg") center / cover no-repeat;
+}
+
+/* header */
+header {
+    height: 100px;
+    padding: 30px 0 290px;
+}
+
+
+/* メインビジュアル */
+main {
+    height: 500px;
+}
+
+
+.top {
+    display: flex;
+}
+
+.rogo {
+    margin: 8px 70px 0 30px;
+}
+
+.menu {
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+}
+
+.menu a {
+    display: flex;
+    background-color: #FFF;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #333333;
+    box-shadow: 4px 4px 0 0 #418F0C;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #333333;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+
+/* hover */
+.menu:hover {
+    transform: translateY(-2px);
+}
+
+
+/* 押した瞬間（SPでも効く） */
+.menu a:active {
+    transform: translate(4px, 4px) scale(0.97);
+    box-shadow: none;
+}
+
+.menu::before,
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    /* 文字より左 */
+    width: 20px;
+    height: 2px;
+    background: #000;
+}
+
+.menu::before {
+    top: 15px;
+}
+
+.menu::after {
+    bottom: 15px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: -10px 0;
+}
+
+
+h3 {
+    color: white;
+    font-size: 44px;
+    font-weight: 700;
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    text-align: center;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.experience h3,
+.topics h3,
+.access h3 {
+    color: #418F0C;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.experience h4,
+.topics h4,
+.access h4 {
+    color: #418F0C;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* 私たちについて */
+.about {
+    margin-top: -300px;
+    background-image: url(../img/back00.png);
+    padding: 0 30px;
+}
+
+.about line {
+    padding: 20px 0;
+}
+
+
+.about h3 {
+    padding-top: 80px;
+}
+
+.about h4 {
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.about h4::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/ato.png);
+    width: 62px;
+    height: 82px;
+    top: -50px;
+    right: 30px;
+}
+
+
+
+.ato {
+    position: relative;
+
+}
+
+.about_txt {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 30px;
+}
+
+.about_img {
+    display: flex;
+    margin: 30px 0;
+}
+
+.about_img02 {
+    margin-left: 40px;
+}
+
+.btn_01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.btn_01 a {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.294);
+    font-size: 15px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-decoration: none;
+    gap: 20px;
+    padding: 12px 44px 12px 60px;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+
+/* ホバーでちょい浮く */
+.btn_01 a:hover {
+    transform: translateY(-2px);
+}
+
+/* 押した瞬間（SPでも効く） */
+.btn_01 a:active {
+    transform: translate(4px, 4px) scale(0.97);
+    box-shadow: none;
+}
+
+/* レザークラフト体験 */
+.experience {
+    background-color: F8F8F8;
+}
+
+.experience h3 {
+    color: #418F0C;
+    font-size: 44px;
+    margin-top: 60px;
+}
+
+.experience h4 {
+    color: #418F0C;
+    font-size: 12px;
+}
+
+.exp_txt {
+    color: #333333;
+    text-align: center;
+    font-size: 14px;
+    font-weight: Medium;
+    margin: 30px 0 20px;
+}
+
+.exp_items {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: 30px 0;
+    column-gap: 32px;
+}
+
+.exp_item {
+    transition: transform 0.4s ease;
+    width: 155px;
+    flex-shrink: 0;
+}
+
+.exp_item img {
+    width: 155px;
+    height: 166px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 #6E8C51;
+}
+
+.exp_item.is-active {
+    transform: scale(1.08);
+}
+
+.clone {
+    pointer-events: none;
+}
+
+.btn_02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 30px 60px;
+}
+
+.btn_02 a {
+    /* background-color: #317901; */
+    display: flex;
+    border-radius: 50px;
+    border: 2px solid #333333;
+    box-shadow: 4px 4px 0 0 #6E8C51;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    color: #333333;
+    text-decoration: none;
+    gap: 25px;
+    padding: 12px 34px 12px 40px;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* ホバーでちょい浮く */
+.btn_02 a:hover {
+    transform: translateY(-2px);
+}
+
+/* 押した瞬間（SPでも効く） */
+.btn_03 a:active {
+    transform: translate(4px, 4px) scale(0.97);
+    box-shadow: none;
+}
+
+.sclorr01,
+.sclorr02 {
+    display: flex;
+    gap: 40px;
+    will-change: transform;
+}
+
+.sclorr01 img,
+.sclorr02 img {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.scllor-warp {
+    position: relative;
+    height: 180vh;
+    /* スクロール量を作る */
+    overflow: hidden;
+    display: flex;
+}
+
+.scroll-infinity__wrap {
+    overflow: hidden;
+}
+
+.scroll-infinity__wrap p img {
+    width: 95px;
+    height: 69px;
+}
+
+@keyframes infinity-scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0
+}
+
+.scroll-infinity__list--left {
+    animation: infinity-scroll-left 30s infinite linear 0.5s both;
+}
+
+.scroll-infinity__item {
+    width: calc(50vw / 6);
+}
+
+@keyframes infinity-scroll-right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.scroll-infinity__list--right {
+    animation: infinity-scroll-right 30s infinite linear 0.5s both;
+}
+
+
+
+
+/* ショップ */
+.shop {
+    margin-top: -70px;
+    background-color: #317901;
+    border-radius: 20px;
+    color: white;
+    margin-top: 60px;
+}
+
+.shop h3 {
+    font-size: 44px;
+    padding-top: 50px;
+}
+
+.shop h4 {
+    font-size: 12px;
+}
+
+.shop_box {
+    margin: 10px 0 30px;
+}
+
+.shop_item {
+    display: flex;
+    column-gap: 70px;
+}
+
+.item01 {
+    margin: 30px 0 10px 30px;
+}
+
+.item03 {
+    padding-left: 20px;
+}
+
+.shop_txt {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    display: flex;
+    padding-left: 30px;
+}
+
+.online {
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+    /* padding: 20px 0; */
+    column-gap: 20px;
+    animation: slide 20s linear infinite;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.online_item img {
+    width: 155px;
+    height: 166px;
+    border: 1px solid #8A6666;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 #8A6666;
+}
+
+.btn_03 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 -40px 0;
+}
+
+.btn_03 a {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid #8A6666;
+    box-shadow: 4px 4px 0 0 #8A6666;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-decoration: none;
+
+    gap: 25px;
+    padding: 12px 24px 12px 30px;
+
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+/* ホバーでちょい浮く */
+.btn_03 a:hover {
+    transform: translateY(-2px);
+}
+
+/* 押した瞬間（SPでも効く） */
+.btn_03 a:active {
+    transform: translate(4px, 4px) scale(0.97);
+    box-shadow: none;
+}
+
+/* ファーストシューズ */
+.firstshose h5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: -20px;
+}
+
+.first_title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.first_txt {
+    display: flex;
+    margin: 30px;
+    column-gap: 15px;
+}
+
+.first_txt dl {
+    font-size: 14px;
+    margin: 20px 0 0;
+}
+
+.first_txt dt {
+    font-weight: 500;
+}
+
+.first_txt dd {
+    font-weight: 500;
+}
+
+.first_p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+}
+
+.firstshose a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0 130px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+
+/* お客さまの声 */
+.voice {
+    color: white;
+    background-image: url(../img/back_img.png);
+    height: 750px;
+    margin: -80px 0 0;
+}
+
+.voice h3 {
+    font-size: 44px;
+    font-weight: 700;
+    padding: 70px 0 0;
+}
+
+.voice h4 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.voice_slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    /* 横スクロール可 */
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.voice-card {
+    background: #fff;
+    color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 280px;
+    scroll-snap-align: center;
+    border: 2px solid #1C5996;
+    box-shadow: 12px 12px 0 0 #4976A4;
+}
+
+.voice-card p:not(.voice_text) {
+    display: inline-block;
+    border: 1px solid #333333;
+    background: #f8f8f8;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-right: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.voice>div:last-child {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.voice_progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+
+.progress_bar {
+    position: relative;
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress_fill {
+    position: absolute;
+    width: 20px;
+    /* ← 黄色棒の長さ（固定） */
+    height: 100%;
+    background: #d8d04f;
+    border-radius: 999px;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+/* クエスチョン */
+.Q_A {
+    margin-top: -140px;
+    background-color: #9A2326;
+    border-radius: 0px 70px 20px 20px;
+    padding: 70px 30px;
+}
+
+.Q_A h3 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.Q_A h4 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.qa_box {
+    position: relative;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 16px 16px 12px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.294);
+    border: 1px solid #333333;
+}
+
+.qa_box dt,
+.qa_box dd {
+    position: relative;
+}
+
+.qa_box dt {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    /* border-bottom: 1px solid #333333; */
+    padding: 8px 0 12px 50px;
+}
+
+
+.qa_box dt::before {
+    content: "";
+    position: absolute;
+    background: url(../img/Q.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    left: 0;
+}
+
+.qa_box dd::before {
+    content: "";
+    position: absolute;
+    background: url(../img/A.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    top: 7px;
+    left: 0;
+}
+
+.qa_box dd div {
+    position: relative;
+    padding: 12px 0px 0px 50px;
+    border-top: 1px solid #333333;
+}
+
+
+/* アコーディオン初期状態 */
+.qa_box dd {
+    font-size: 12px;
+    font-weight: 500;
+
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+}
+
+
+/* 開いた時 */
+.qa_box button {
+    background: none;
+    border: none;
+    transition: 0.3s;
+}
+
+.qa_box.active button {
+    transform: rotate(180deg);
+}
+
+
+
+
+button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.more p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.more_title {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    margin: 46px 0 18px 0;
+}
+
+.more a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0 10px;
+}
+
+
+/* トピックス */
+.topics h3 {
+    margin-top: 50px;
+}
+
+.topics h4 {
+    margin-bottom: 20px;
+}
+
+.news {
+    margin: 20px 30px;
+}
+
+.news .news_box {
+    border-bottom: 1px dotted #333333;
+}
+
+.news .news_box:first-child {
+    border-top: 1px dotted #333333;
+}
+
+.news_date {
+    display: flex;
+    /* margin-top: 10px; */
+}
+
+.news_txt {
+    display: flex;
+    align-items: center; 
+    margin: 10px 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.news_txt .n_pic {
+    margin-left: auto;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.n_mark {
+    margin: 10px 10px 0;
+    border: 1px solid #FFA84B;
+    border-radius: 50px;
+    padding: 2px 20px;
+    color: #FFA84B;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.news .news_box:active {
+    background-color: #EAF6E2;
+}
+
+.line_pic {
+  /* padding: 50px; */
+  margin: 30px 0 0 -30px;
+}
+
+
+/* アクセス */
+.access h3 {
+    margin-top: 50px;
+}
+
+.access h4 {
+    margin-bottom: 20px;
+}
+
+.ac_txt {
+    margin-bottom: 40px;
+}
+
+/* フォロー */
+.sns {
+    background-color: #4C4B00;
+    border-radius: 70px 0 0 0;
+    width: 90%;
+    text-decoration: none;
+    margin-left: 39px;
+    padding-bottom: 110px;
+}
+
+.follow {
+    display: flex;
+    padding: 30px 30px 0;
+    gap: 8px;
+}
+
+.sns h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.sns a {
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+
+/* フッター */
+footer {
+    margin-top: -90px;
+    background-color: #317901;
+    border-radius: 0 95px 0 0;
+}
+
+footer img {
+    width: 154px;
+    height: 65px;
+    margin-top: 20px;
+}
+
+.ft_rogo {
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 700;
+
+    border: 3px dotted #558C50;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.ft_copy {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+
+
+/* フォトギャラリー */
+
+
+.photogallery {
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p_item {
+  position: relative;
+  display: inline-block;
+}
+
+.p_item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* 境界だけをフワッとぼかす */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+/* タップで拡大・回転 */
+.p_item img:active {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* アニメーション初期状態 */
+.fadeLeft { opacity:0; transform: translateX(-20px) scale(0.95); transition: 0.8s ease;}
+.fadeRight { opacity:0; transform: translateX(20px) scale(0.95); transition: 0.8s ease;}
+.fadeUp { opacity:0; transform: translateY(20px) scale(0.95); transition: 0.8s ease;}
+.fadeDown { opacity:0; transform: translateY(-20px) scale(0.95); transition: 0.8s ease;}
+
+/* 表示状態 */
+.is-show { opacity:1; transform: translate(0,0) scale(1); }
+
+
+
+
+
